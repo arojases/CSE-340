@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+/* 64em is also 1028px (if basefont is 16px) 
+@media only screen and (min-width: 64rem) {}*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-image: url("../images/site/checkerboard.jpg");
+    box-sizing: border-box;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+/*  box-sizing: border-box;*/
+    box-sizing: inherit;
+}
+
+/* BODY */
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+/*----------HEADER----------*/
+
+.account {
+    float: right;
+    padding-right: 30px;
+    font-family: 'Coming Soon', cursive;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+
+
+/*----------NAV----------*/
+
+nav ul {
+    font-family: 'Coming Soon', cursive;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3a3a3a;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color #bababa on hover */
+nav ul li a:hover {
+    background-color: #bababa;
+}
+
+
+/*----------BODY----------*/
+
+.principal {
+    max-width: 64rem;
+    padding: 0.2%;
+    margin: auto;
+    background-color: #ffffff;
+    margin-top: 20px;
+    font-family: 'Coming Soon', cursive;
+    border-radius: 16px;
+    border: #4c96d7 5px solid;
+}
+
+.info p {
+    font-size: 20px;
+    text-align: left;
+}
+
+div .info {
+    position: absolute;
+    top: 250px;
+    margin-left: 3rem;
+    padding: 0.5rem;
+    color: #1371a0;
+}
+
+.btnown {
+    padding: 0.5rem;
+    background-color: #20d9e8;
+    color: #3a3a3a;
+    border: #3a3a3a 1px solid;
+    width: 150px;
+}
+
+main img, h1 {
+    padding: 1rem;
+}
+
+main img{
+    margin-left: 2rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.upgrades {
+    grid-column: 1;
+    width: 450px;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    padding: 1rem;
+}
+
+.reviews {
+
+    grid-column: 2;
+    padding: 1rem;
+}
+
+.upgrades>h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+}
+
+.upgrades img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.flux,
+.flame,
+.bumper,
+.hub {
+    background-color: #4c96d7;
+}
+
+#flux {
+    grid-row: 2;
+    grid-column: 1;
+    text-align: center;
+}
+
+#flame {
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+
+}
+
+#bumper {
+    grid-row: 3;
+    grid-column: 1;
+    text-align: center;
+}
+
+#hub {
+    grid-row: 3;
+    grid-column: 2;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    border-top: #3a3a3a 3px solid;
+
+}
+
+/* For vehicle display in classification view */
+#inv-display {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+#inv-display h2{
+    font-size: 1rem;
+}
+
+#inv-display li {
+    max-width: 200px;
+    flex: 1 0 auto;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px #111 solid;
+
+}
+  
+#inv-display div {
+    width: 100%;
+}
+
+#inv-display li img {
+    max-width: 100%;
+    margin: .5em;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+    }
+
+    nav {
+        width: 100%;
+        font-size: small;
+    }
+
+    .principal {
+        width: 100%;
+    }
+
+    main>img {
+        width: 100%;
+        margin-left: 0.2rem;
+    }
+
+    section {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 10px;
+    }
+
+    .reviews {
+        grid-row: 1;
+        grid-column: 1;
+        margin-top: 3rem;
+    }
+
+    .upgrades {
+        width: 100%;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    main>h1 {
+        width: 100%;
+        font-size: large;
+    }
+
+    .principal .info{
+        float: right;
+    }
+
+    .info p {
+        font-size: medium;
+        text-align: left;
+    }
+   
+    div .info {
+        position: absolute;
+        top: 200px;
+        margin-left: 1rem;
+    }
+    
+    .btnown {
+        color: #3a3a3a;
+        border: #3a3a3a 1px solid;
+        width: 150px;
+        margin-top: 120px;
+        margin-left: 100px;
+        padding: 1.5rem;
+    }
+
+    #inv-display{
+        margin: 10%;
+        padding: .2em;
+        display: flex;
+        flex-direction: column;
+    }
+       
+    #inv-display li{
+        margin-bottom: .5em;
+        list-style-type: none;
+        max-width: 100%;
+    }
+
+}
